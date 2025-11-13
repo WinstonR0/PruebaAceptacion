@@ -17,11 +17,11 @@
     
             <div class="border border-grey rounded-4 d-flex justify-content-between p-3 shadow-lg mb-4">
                 
-                    <div class="col-6 d-flex justify-content-center align-content-center">
-                        <div class="row p-3">
-                            <input class="mb-3 border border-grey rounded-3 shadow" type="number" id="numero1" placeholder="numero 1">
+                    <div class="col d-flex justify-content-center">
+                        <div class="row p-3 d-flex justify-content-center align-content-center">
+                            <input class="fs-5 mb-3 border border-grey rounded-3 shadow"  type="number" id="numero1" placeholder="numero 1">
 
-                            <input class="border border-grey rounded-3 shadow " type="number" id="numero2" placeholder="numero 2">  
+                            <input class="fs-5 mb-3 border border-grey rounded-3 shadow" type="number" id="numero2" placeholder="numero 2">  
                         </div>
                         
                     </div>
@@ -29,9 +29,13 @@
 
                     <div class="col-6 border-black d-flex justify-content-center align-content-center p-2 ">
                         <div class="row p-3">
-                            <button class="mb-3 btn btn-danger shadow" onclick="sumar()">Realizar Suma</button>
+                            <button class="mt-3 mb-3 btn btn-danger shadow" onclick="sumar()">Realizar Suma</button>
 
-                            <button class="btn btn-primary" onclick="restar()">Realizar resta</button>
+                            <button class="mb-3 btn btn-primary" onclick="restar()">Realizar Resta</button>
+
+                            <button class="mb-3 btn btn-warning" onclick="multiplicar()">Realizar Multiplicacion</button>
+
+                            <button class="mb-3 btn btn-info" onclick="division()">Realizar Division</button>
                         </div>
                     </div>
             </div>
@@ -43,6 +47,7 @@
         
     </div>
 
+    <!-- se usa parse float para pasar de string a float -->
     <script>
         function sumar(){
             const num1 = parseFloat(document.getElementById('numero1').value);
@@ -58,6 +63,26 @@
                 const num2 = parseFloat(document.getElementById('numero2').value);
 
                 document.getElementById('resultado').textContent = 'Resultado: ' + (num1-num2);
+        }
+
+        function multiplicar(){
+            const num1 = parseFloat(document.getElementById('numero1').value);
+
+            const num2 = parseFloat(document.getElementById('numero2').value);
+
+            document.getElementById('resultado').textContent = 'Resultado: ' + (num1 * num2)
+        }
+
+        function division(){
+            const num1 = parseFloat(document.getElementById('numero1').value);
+
+            const num2 = parseFloat(document.getElementById('numero2').value);
+
+            document.getElementById('resultado').textContent = 'Resultado: ' + (num1/num2)
+
+            if ( num2 == 0){
+                document.getElementById('resultado').textContent = 'No se puede dividir por 0'
+            }
         }
     </script>   
 </body>
