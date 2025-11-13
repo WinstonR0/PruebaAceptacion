@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!doctype html>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <title>Calculadora Simple</title>
+</head>
+<body class="">
+    <div class="container-fluid mt-4 p-4" style="max-width: 65%">
+            <div class="text-center mb-4">
+                <h2 class="fs-1">
+                    Calculadora
+                </h2>
+            </div>
+    
+            <div class="border border-grey rounded-4 d-flex justify-content-between p-3 shadow-lg mb-4">
+                
+                    <div class="col-6 d-flex justify-content-center align-content-center">
+                        <div class="row p-3">
+                            <input class="mb-3 border border-grey rounded-3 shadow" type="number" id="numero1" placeholder="numero 1">
+
+                            <input class="border border-grey rounded-3 shadow " type="number" id="numero2" placeholder="numero 2">  
+                        </div>
+                        
+                    </div>
+                    
+
+                    <div class="col-6 border-black d-flex justify-content-center align-content-center p-2 ">
+                        <div class="row p-3">
+                            <button class="mb-3 btn btn-danger shadow" onclick="sumar()">Realizar Suma</button>
+
+                            <button class="btn btn-primary" onclick="restar()">Realizar resta</button>
+                        </div>
+                    </div>
+            </div>
+
+            <p class="border border-grey rounded-4 d-flex justify-content-between p-3 shadow-lg" id="resultado">Aqui se vera el resultado</p>
+        
+            
+
+        
+    </div>
+
+    <script>
+        function sumar(){
+            const num1 = parseFloat(document.getElementById('numero1').value);
+
+            const num2 = parseFloat(document.getElementById('numero2').value);
+
+            document.getElementById('resultado').textContent = 'Resultado: ' + (num1 + num2);
+        }
+
+        function restar(){
+                const num1 = parseFloat(document.getElementById('numero1').value);
+
+                const num2 = parseFloat(document.getElementById('numero2').value);
+
+                document.getElementById('resultado').textContent = 'Resultado: ' + (num1-num2);
+        }
+    </script>   
+</body>
+</html>
