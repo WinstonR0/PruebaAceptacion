@@ -13,7 +13,8 @@ driver.get('file:///Users/rosdri/Documents/PruebaAceptacion/PruebaAceptacion/cal
 # Se encuentran los botones y se envian los datos
 driver.find_element(By.ID, 'numero1').send_keys('9')
 driver.find_element(By.ID, 'numero2').send_keys('5')
-# se usa XPTAH ya que se debe buscar el nombre por la funcion debido a que hay mas de un boton y
+# se usa XPTAH ya que se debe buscar el nombre por la funcion debido a que hay mas de un boton ygit remote add origin https://<TOKEN>@github.com/WinstonR0/PruebaAceptacion.git
+
 
 #Se espera a que el boton sea clickeable
 # Se debe poner el texto dentro del boton, no como tal el ID
